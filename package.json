@@ -1,0 +1,77 @@
+{
+	"name": "sveltekit-db",
+	"version": "0.0.0",
+	"description": "Cross-platform database solution for SvelteKit.",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/JacobLinCool/sveltekit-db.git"
+	},
+	"homepage": "https://github.com/JacobLinCool/sveltekit-db",
+	"scripts": {
+		"prepare": "husky install",
+		"dev": "vite dev",
+		"build": "vite build && pnpm run package",
+		"preview": "vite preview",
+		"package": "svelte-kit sync && svelte-package && publint",
+		"prepublishOnly": "pnpm run package",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"lint": "prettier --ignore-path .gitignore --check **/*.{ts,js,json,yaml,yml,svelte,html} && eslint .",
+		"format": "prettier --ignore-path .gitignore --write **/*.{ts,js,json,yaml,yml,svelte,html}",
+		"changeset": "changeset"
+	},
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"svelte": "./dist/index.js"
+		}
+	},
+	"files": [
+		"dist",
+		"!dist/**/*.test.*",
+		"!dist/**/*.spec.*"
+	],
+	"peerDependencies": {
+		"@sveltejs/kit": "^1.20.0",
+		"svelte": "^3.54.0"
+	},
+	"devDependencies": {
+		"@changesets/changelog-github": "^0.4.8",
+		"@changesets/cli": "^2.26.1",
+		"@sveltejs/adapter-auto": "^2.0.0",
+		"@sveltejs/package": "^2.0.0",
+		"@trivago/prettier-plugin-sort-imports": "^4.1.1",
+		"@types/better-sqlite3": "^7.6.4",
+		"@typescript-eslint/eslint-plugin": "^5.45.0",
+		"@typescript-eslint/parser": "^5.45.0",
+		"changeset": "^0.2.6",
+		"eslint": "^8.28.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-svelte": "^2.26.0",
+		"husky": "^8.0.3",
+		"lint-staged": "^13.2.2",
+		"prettier": "^2.8.0",
+		"prettier-plugin-svelte": "^2.8.1",
+		"publint": "^0.1.9",
+		"svelte": "^3.54.0",
+		"svelte-check": "^3.0.1",
+		"tslib": "^2.4.1",
+		"typescript": "^5.0.0",
+		"vite": "^4.3.0"
+	},
+	"svelte": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"type": "module",
+	"dependencies": {
+		"better-sqlite3": "^8.4.0",
+		"kysely": "^0.25.0",
+		"kysely-d1": "^0.3.0"
+	},
+	"packageManager": "pnpm@8.6.0",
+	"lint-staged": {
+		"*.{ts,js,json,yaml,yml,svelte,html}": [
+			"prettier --write"
+		]
+	}
+}
