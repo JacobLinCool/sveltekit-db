@@ -1,5 +1,11 @@
 # sveltekit-db
 
+## 0.1.1
+
+### Patch Changes
+
+-   [`1de010e`](https://github.com/JacobLinCool/sveltekit-db/commit/1de010ec59979db4ed4de462efe47adbb5cac4ff) Thanks [@JacobLinCool](https://github.com/JacobLinCool)! - add boolean support for D1
+
 ## 0.1.0
 
 ### Minor Changes
