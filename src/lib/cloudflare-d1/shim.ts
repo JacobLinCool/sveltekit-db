@@ -113,6 +113,7 @@ class D1PreparedStatement {
 	bind(...values) {
 		for (const r in values) {
 			switch (typeof values[r]) {
+				case "boolean":
 				case "number":
 				case "string":
 					break;
