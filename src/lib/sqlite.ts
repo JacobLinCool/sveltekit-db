@@ -1,6 +1,9 @@
 import type { Database as DBInstance } from "better-sqlite3";
+import debug from "debug";
 import { Kysely, SqliteDialect } from "kysely";
 import { SQLITE_FILE } from "./env.js";
+
+const log = debug("sveltekit-db:sqlite");
 
 export const SQLiteDBCache = new Map<string, DBInstance>();
 
@@ -15,7 +18,7 @@ export class SQLiteDB<Schema> extends Kysely<Schema> {
 
 					const lib = "better-sqlite3";
 					const { default: DB } = await import(/* @vite-ignore */ lib);
-					const db = new DB(SQLITE_FILE, { verbose: console.log }) as DBInstance;
+					const db = new DB(SQLITE_FILE, { verbose: log }) as DBInstance;
 					SQLiteDBCache.set(SQLITE_FILE, db);
 					return db;
 				},
