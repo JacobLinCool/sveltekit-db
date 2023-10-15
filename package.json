@@ -41,7 +41,7 @@
 	},
 	"peerDependencies": {
 		"@sveltejs/kit": "^1.0.0",
-		"better-sqlite3": "^8.0.0",
+		"better-sqlite3": "^8.0.0 || ^9.0.0",
 		"kysely-d1": "^0.3.0",
 		"svelte": "^3.0.0 || ^4.0.0"
 	},
