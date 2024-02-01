@@ -13,6 +13,7 @@ pnpm i -D sveltekit-db
 You can define your database schema like:
 
 ```ts
+// src/lib/db/schema.ts
 export interface User {
     id: number;
     name: string;
@@ -32,16 +33,21 @@ export interface Database {
 }
 ```
 
+```ts
+// src/lib/db/index.ts
+import { DB } from "sveltekit-db";
+import type { Database } from "./schema";
+
+export const db = DB<Database>();
+```
+
 Then you can use it like:
 
 ```ts
-import { DB } from "sveltekit-db";
+import { db } from "$lib/db";
 import type { PageServerLoad } from "./$types";
-import type { Database } from "./schema";
 
-export const load: PageServerLoad = async ({ platform }) => {
-    const db = DB<Database>(platform);
-
+export const load: PageServerLoad = async () => {
     const documents = await db
         .selectFrom("Document")
         .where("Document.owner", "=", 1)
@@ -55,7 +61,7 @@ export const load: PageServerLoad = async ({ platform }) => {
 
 ## Supported databases
 
-- [x] Cloudflare D1 (binding to `D1` environment variable)
+- [x] Cloudflare D1 (binding to `D1`, `DB`, or `DATABASE` environment variable)
 - [x] SQLite (using `SQLITE_FILE` environment variable, defaults to `db.sqlite`)
 
 ## Configure with environment variables
