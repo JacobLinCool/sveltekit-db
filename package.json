@@ -1,6 +1,6 @@
 {
 	"name": "sveltekit-db",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"description": "Cross-platform database solution for SvelteKit.",
 	"license": "MIT",
 	"repository": {

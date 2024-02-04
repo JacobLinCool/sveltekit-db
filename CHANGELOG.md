@@ -1,5 +1,11 @@
 # sveltekit-db
 
+## 0.2.1
+
+### Patch Changes
+
+- [`3bbbcfb`](https://github.com/JacobLinCool/sveltekit-db/commit/3bbbcfbbcf92474a17a9ad0feb46b9ae3894858f) Thanks [@JacobLinCool](https://github.com/JacobLinCool)! - Fix poblem of accessing env var while prerendering
+
 ## 0.2.0
 
 ### Minor Changes
