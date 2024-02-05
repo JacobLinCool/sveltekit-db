@@ -37,7 +37,7 @@
 	},
 	"dependencies": {
 		"debug": "^4.3.4",
-		"kysely": "^0.25.0"
+		"kysely": "^0.27.0"
 	},
 	"peerDependencies": {
 		"@sveltejs/kit": "^1.0.0 || ^2.0.0",
