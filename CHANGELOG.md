@@ -1,5 +1,11 @@
 # sveltekit-db
 
+## 0.2.2
+
+### Patch Changes
+
+- [`cef0d19`](https://github.com/JacobLinCool/sveltekit-db/commit/cef0d19cfb21b7e5de0bb46a1f52cbf1d131f7fb) Thanks [@JacobLinCool](https://github.com/JacobLinCool)! - Upgrade dep version specifier to allow for more updates.
+
 ## 0.2.1
 
 ### Patch Changes
