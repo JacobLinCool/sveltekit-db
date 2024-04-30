@@ -80,7 +80,7 @@
 		"typescript": "^5.3.3",
 		"vite": "^5.0.12"
 	},
-	"packageManager": "pnpm@8.15.1",
+	"packageManager": "pnpm@8.15.8",
 	"lint-staged": {
 		"*.{ts,js,json,yaml,yml,svelte,html}": [
 			"prettier --write"
